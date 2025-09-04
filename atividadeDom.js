@@ -22,13 +22,13 @@ decrese.addEventListener("click", () => {
   }
 });
 
-// Campo de texto + contador de caracteres + histórico
+// Characters count
 const textCharacters = document.getElementById("textCharacters");
 const countCharacters = document.getElementById("countCharacters");
 const textHistoric = document.getElementById("textHistoric");
 
 textCharacters.addEventListener("input", () => {
-  countCharacters.textContent = textCharacters.value.length;
+    countCharacters.textContent = textCharacters.value.length;
 });
 
 textCharacters.addEventListener("keydown", (event) => {
@@ -41,23 +41,38 @@ textCharacters.addEventListener("keydown", (event) => {
   }
 });
 
-// Lista dinâmica
+// Llist
 const listType = document.getElementById("listType");
 const addList = document.getElementById("addList");
 
 addList.addEventListener("click", () => {
-  const tipo = listType.value; // "ol" ou "ul"
+  const tipo = listType.value; 
   const lista = document.createElement(tipo);
   const item = document.createElement("li");
   item.textContent = "Novo item";
-
+  
   const btnRemover = document.createElement("button");
   btnRemover.textContent = "Remover";
   btnRemover.addEventListener("click", () => {
-    lista.remove();
+  lista.remove();
   });
 
-  item.appendChild(btnRemover);
-  lista.appendChild(item);
-  document.body.appendChild(lista);
+lista.appendChild(item);
+document.body.appendChild(lista);
+
+    //reset
+
+const bntClearAll = document.getElementById("bntClearAll");
+bntClearAll.addEventListener("click", () => {
+    
+contador = 0;
+displayCount.textContent = `Contador: ${contador}`;
+textCharacters.value = "";
+countCharacters.textContent = "0";
+textHistoric.innerHTML = "";
+
+document.querySelectorAll("ul, ol").forEach(lista => lista.remove());
 });
+});
+
+
