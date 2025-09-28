@@ -84,17 +84,14 @@ h1 {
   font-size: 1.2em;
   color: #444;
 }
-#restart{
-  margin-top: 20px;
-  padding: 10px 25px;
-  font-size: 1em;
-  background-color: #dc3545;
+#reiniciar {
+  padding: 10px 20px;
+  background-color: #0056b3;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
 }
-
-#restart:hover {
-  background-color: #c82333;
+#reiniciar:hover {
+  background-color: #022d5c;
 }
