@@ -1,33 +1,47 @@
 /* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=M+PLUS+1+Code:wght@100..700&family=M+PLUS+1:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f0f4ff, #d0e0ff);
+  font-family: 'Nunito Sans';
+  background-color: #FCFCFC;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #2D2D2D;
   height: 100vh;
 }
 
 .quiz-container {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  width: 90%;
-  max-width: 600px;
-  text-align: center;
+  width: 1000px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+}
+
+.titles-questions{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 450px;
 }
 
 h1 {
-  color: #333;
+  color: #0000;
   margin-bottom: 20px;
 }
 
+.answer-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #question-text {
-  font-size: 1.2em;
-  margin-bottom: 15px;
+  margin: 0;
+  font-size: 35px;
 }
 
 #options-list {
@@ -36,21 +50,20 @@ h1 {
 }
 
 .option-btn {
-  background-color: #007bff;
-  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 10px;
   border: none;
-  padding: 12px 20px;
-  margin: 8px 0;
-  width: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
-
+  background-color: #c9dbff;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  margin: 3px;
 }
 
 .option-btn:hover {
-  background-color: #0056b3;
+  cursor: pointer;
+  background-color: #9ecdff;
 }
 
 .option-btn.selected {
