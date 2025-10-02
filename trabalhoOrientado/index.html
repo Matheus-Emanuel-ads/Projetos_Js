@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz - Quem Sou Eu?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="main-container">
+    <header>
+      <div class="header-container">
+        <div>
+          <img id="icon" src="/Projetos_Js/Trabalho/20220118102413Tres-Espias-Demais-vai-ganhar-uma-nova-temporada.jpg" alt="">
+          <p id="p-header">Quiz Três Espiãs Demais</p>
+        </div>
+        <div>
+          <a href=""><button id="btn-start">Voltar do início</button></a>
+        </div>
+      </div>
+    </header>
+  </section>
+  <section class="quiz" id="question-container">
+    <div class="question-container">
+      <div class="quiz-container">
+        <h2 id="quiz-title">Quiz: Quem Sou Eu?</h2>
+        <h2 id="question-text">Pergunta 1</h2>
+      </div>
+      <div class="option-container">
+        <ul id="options-list">
+          <li><button class="option-btn">Alternativa A</button></li>
+          <li><button class="option-btn">Alternativa B</button></li>
+          <li><button class="option-btn">Alternativa C</button></li>
+        </ul>
+        <button id="next-btn">Próxima Pergunta</button>
+      </div>
+      <div id="result" class="hidden"></div>
+    </div>
+  </section>
+</body>
+<script src="/trabalhoOrientado/espiasDemaisOrientado.js"></script>
+</html>
