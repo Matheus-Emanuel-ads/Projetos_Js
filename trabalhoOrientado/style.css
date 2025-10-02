@@ -119,8 +119,36 @@ ul#options-list{
   height: 50px;
   font-size: 15px;
   margin: 20px;
+  margin-bottom: 50px;
 }
 
 #next-btn:hover{
   background-color: black;
+}
+
+.text{
+  font-size: 30px;
+}
+
+.text-points{
+  font-size: 20px;
+}
+
+.p{
+  margin: 20px;
+  width: 750px;
+}
+
+#reiniciar{
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #343434;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
+  margin: 20px;
+  margin-bottom: 50px;
 }
