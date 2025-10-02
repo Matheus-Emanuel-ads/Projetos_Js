@@ -130,19 +130,26 @@ class Quiz {
     document.getElementById("reiniciar").onclick = () => this.reiniciar();
   }
 
-  reiniciar() {
-    this.perguntaAtual = 0;
-    this.alternativaSelecionada = null;
-    for (let nome in this.personagens) {
-      this.personagens[nome].resetar();
-    }
+reiniciar() {
+  this.perguntaAtual = 0;
+  this.alternativaSelecionada = null;
 
-    this.resultDiv.classList.add("hidden");
-    document.getElementById("question-container").classList.remove("hidden");
-    this.nextBtn.classList.remove("hidden");
-
-    this.carregarPergunta();
+  // Zera os pontos dos personagens
+  for (let nome in this.personagens) {
+    this.personagens[nome].resetar();
   }
+
+  // Esconde o resultado
+  this.resultDiv.innerHTML = ""; // limpa o conteúdo
+  this.resultDiv.classList.add("hidden");
+
+  // Mostra novamente o quiz
+  document.getElementById("question-container").classList.remove("hidden");
+  this.nextBtn.classList.remove("hidden");
+
+  // Recarrega a primeira pergunta
+  this.carregarPergunta();
+}
 }
 
 const elementosDOM = {
