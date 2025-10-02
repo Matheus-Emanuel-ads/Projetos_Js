@@ -111,12 +111,20 @@ class Quiz {
       Alex: "Você seria a Alex!! Você é uma pessoa competitiva e brincalhona. Pessoas como você e a Alex amam praticar os mais diversos esportes da forma mais divertida possível, não pensando no mundo fora disso."
     };
 
-    this.resultDiv.innerHTML = `
-      <strong>Resultado:</strong><br><br>
-      <em>${descricao[perfilFinal]}</em><br><br>
-      <strong>Pontuação final:</strong> ${maiorPontuacao} pontos<br><br>
-      <button id="reiniciar">Recomeçar</button>
-    `;
+    const imagens = {
+    Sam: "https://i.pinimg.com/736x/54/90/5d/54905db6a983fa17c7e0fa80c7db478a.jpg",
+    Clover: "https://i.pinimg.com/564x/ce/41/60/ce4160f7f6084afc31f669bb54d63111.jpg",
+    Alex: "https://i.pinimg.com/736x/a4/91/85/a49185bf2ce3f0996b9c4ee3603ac1cb.jpg",
+};
+
+
+   this.resultDiv.innerHTML = `
+  <strong class="text">Resultado:</strong><br><br>
+  <img src="${imagens[perfilFinal]}" alt="${perfilFinal}" style="width:200px;"><br>
+  <p class="p">${descricao[perfilFinal]}</p>
+  <strong class="text-points">Pontuação final:</strong> ${maiorPontuacao} pontos<br><br>
+  <button id="reiniciar">Recomeçar</button>
+`;
     this.resultDiv.classList.remove("hidden");
 
     document.getElementById("reiniciar").onclick = () => this.reiniciar();
