@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#imageBlock{
+    position: fixed;
+    background-color: red;
+    right: 15vh; 
+    top: 10vh;
+    width: 86vh;
+    min-height: 80vh;
+    font-size: small;
+    text-align: center;
+    border-radius: 2px;
+    border: 3px solid rgb(24, 0, 0);
+}
+#imageBlock header{
+    background-color: white;
+    border-radius: 8px;
+    width: 80vh;
+    margin-left: 3vh;
+    margin-top: 3vh;
+    border: 2.7px solid black
+}
+#imageBlock header h1{
+    color: rgb(190, 2, 2);
+}
+.section{
+    background-color: white;
+    border-radius: 8px;
+    width: 80vh;
+    margin-left: 3vh;
+    margin-top: 1vh;
+    border: 2.7px solid black;
+    display: flex;
+    align-items: center;
+}
+.notesTitle{
+    font-size: medium;
+    margin-left: 1vh;
+}
+.itens{
+    text-align: start;
+}
+footer p{
+    color: white;
+}
+.footerInfos{
+    background-color: #fce46c;
+    color: black;
+    width: 80vh;
+    margin-left: 3vh;
+    border-radius: 6px;
+}

@@ -1,12 +1,12 @@
 #alertBlock {
-  width: 80%;
+  width: 110%;
   height: 100%;
   padding: 2vh;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: rgb(170, 1, 1);
+  background-color: rgb(233, 3, 3);
 }
 
 body {
@@ -20,28 +20,30 @@ body {
   
 }
 
-
 .alert {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   min-height: 10vh;
   background-color: #f8f8f8;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
-  border: 2px solid black;
+  border: 2.5px solid black;
   min-height: 10vh;
+}
+.alert h1{
+  color: rgb(184, 0, 0);
 }
 
 .notice {
   font-size: 1.8em;
   font-weight: bold;
-  background: white;
-  color: #b71c1c;
+  background: rgb(233, 3, 3);
+  color: white;
   padding: 8px 16px;
-  border-radius: 15px;
-  border: 2px solid black;
+  border-radius: 10px;
+  border: 1px solid black;
   display: inline-block;
   margin-top: 10px;
 }
@@ -49,17 +51,17 @@ body {
 .section {
   padding: 20px;
   margin-top: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  background-color: white;
+  border: 2.5px solid black;
 }
 
 .deviations {
-  background-color: #faedc1;
-  border-left: 5px solid #fbc02d;
+  
 }
 
 .improvements {
-  background-color: #d0f7d3;
-  border-left: 5px solid #43a047;
+
 }
 
 footer {
@@ -68,9 +70,12 @@ footer {
   font-style: italic;
   text-align: center;
 }
-.returnInfos{
-  background-color: gray;
+#freePhrase{
   color: white;
+}
+.returnInfos{
+  background-color: #fae71b;
+  color: rgb(0, 0, 0);
   font-size: 15px;
   border-radius: 8px;
 }
