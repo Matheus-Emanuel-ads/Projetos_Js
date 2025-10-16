@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponto de atenção 1</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Ponto de atenção</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="image">
-        <div id="imageContainer">
-            <div id="headerSubject">
-                <div id="alertImg"> <img src="ponto de atenção.png" alt="Imagem de um megafone vermelho"></div>
-                    <h1>PONTO DE ATENÇÃO</h1>
-                    <div id="notice">
-                        <h1>50%</h1>
-                    </div>
-                    <div id="textPoint">
-                    <p>ANALISTA, SUA NOTA NESSA MONITORIA FOI:</p>
-                    <P>ASSUNTO: ASSUNTO ASSUNTO ASSUNTO ASSUNTO ASSUNTO ASSUNTO ASSUNTO</p>
-                    <p>ID/PROTOCOLO:</p>
-                    </div>
-            </div>
+  <div id="infoForm">
+    <header>
+      <h1>Informações do ponto de atenção</h1>
+      <p>Preencha as informações de acordo com os desvios apontados na monitoria realizada</p>
+    </header>
+    <body>
+      <label for="analistName"></label>
+      <input type="text" id="analistName" name="name" placeholder="Nome do analista:">
 
-            <div id="deviations">
-                <h1>DESVIOS</h1>
-            </div>
+      <label for="analistName"></label>
+      <input type="text" id="analistName" name="name" placeholder="Assunto:">
 
-            <div id="improvements">
-                <h1>MELHORIAS</h1>
-            </div>
+      <label for="analistName"></label>
+      <input type="text" id="analistName" name="name" placeholder="ID:">
 
-            <p>SEGUIR BOAS PRÁTICAS E MANTER O FOCO NAS NECESSIDADES DO CLIENTE FAZ TODA A DIFERENÇA!</p>
+      <label for="analistName"></label>
+      <input type="text" id="analistName" name="name" placeholder="Protocolo:">
+  
+      <label for="analistName"></label>
+      <input type="text" id="analistName" name="name" placeholder="Nota:">
+    </body>
+  </div>
+  
+  <div id="alertBlock">
+    <div class="alert">
+      <h1>PONTO DE ATENÇÃO</h1>
+      <p><strong>Monitoriado(a):</strong>Analista</p>
+      <p>NOTA: <span class="notice">81,25%</span></p>
+      <h2>Assunto</h2>
+      <p>Usuário relata ter esquecido sua senha.</p>
+      <p><strong>ID/Protocolo:</strong> 00000000 1111111111</p>
+    </div>
 
-            <div class="infos">
-                <p>AGUARDO O RETORNO NO PRAZO DE ATÉ 2 (DOIS) DIAS ÚTEIS COM A CIÊNCIA OU CONTESTAÇÃO.</p>
-            </div>
+    <div class="section deviations">
+      <h3>Desvio</h3>
+      <ul>
+        <li>Netrbrbetrbetrbtrebrtbetrbertb</li>
+        <li>Rbertbretbertbertbrtebetrbb</li>
+      </ul>
+    </div>
 
-            <div class="infos">
-                <p>AO RETORNAR A INFORMAÇÃO SOLICITADA UTILIZEM A "OPÇÃO RESPONDER A TODOS" E NÃO "RESPONDER".</p>
-            </div>
-        </div>
-    </section>
+    <div class="section improvements">
+      <h3>Melhoria</h3>
+      <ul>
+        <li>wbtwrbwbwrbrwbrbertbewtbtebr.</li>
+        <li>rgfbntrwsbrwtbrwtbrt.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>Seguir boas práticas e manter o foco nas necessidades do cliente faz toda a diferença!</p>
+      <p class="returnInfos">Aguardo o retorno no prazo de até 2 (dois) dias úteis com a ciência ou contestação.</p>
+      <p class="returnInfos">Ao retornar a informação solicitada utilizem a opção "RESPONDER A TODOS" e não "RESPONDER".</p>
+    </footer>
+  </div>
 </body>
 </html>
