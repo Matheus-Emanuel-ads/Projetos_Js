@@ -10,6 +10,25 @@ const melhoriasContainer = document.getElementById("improvementsContainer");
 const ulDesvios = document.getElementById("itensDetour");
 const ulMelhorias = document.getElementById("itensImprovement");
 
+// Função para calcular e atualizar a nota automaticamente
+
+function atualizarPontuacao() {
+    // Seleciona apenas inputs preenchidos
+    const inputsPreenchidos = desviosContainer.querySelectorAll("input");
+    let qtdDesviosPreenchidos = 0;
+
+    inputsPreenchidos.forEach(input => {
+        if(input.value.trim() !== "") qtdDesviosPreenchidos++;
+    });
+
+    let totalPontos = 100 - (qtdDesviosPreenchidos * 6.25);
+    if(totalPontos < 0) totalPontos = 0;
+
+    // Atualiza o span dentro do imageBlock
+    document.getElementById("notice").textContent = totalPontos.toFixed(2).replace(".", ",") + "%";
+}
+
+
 // Função para criar novo campo de Desvio
 function criarNovoDesvio() {
     contDesviations++;
@@ -19,11 +38,15 @@ function criarNovoDesvio() {
     novoDesvio.placeholder = `Desvio ${contDesviations}`;
     desviosContainer.appendChild(novoDesvio);
 
+    // Atualiza a nota sempre que o usuário digitar
     novoDesvio.addEventListener("input", () => {
+        atualizarPontuacao();
         if(novoDesvio.value.trim() !== "" && novoDesvio === desviosContainer.lastElementChild){
             criarNovoDesvio();
         }
     });
+
+    atualizarPontuacao();
 }
 
 // Função para criar novo campo de Melhoria
@@ -35,6 +58,7 @@ function criarNovaMelhoria() {
     novaMelhoria.placeholder = `Melhoria ${contImprovements}`;
     melhoriasContainer.appendChild(novaMelhoria);
 
+    // Nota não é afetada pelas melhorias
     novaMelhoria.addEventListener("input", () => {
         if(novaMelhoria.value.trim() !== "" && novaMelhoria === melhoriasContainer.lastElementChild){
             criarNovaMelhoria();
@@ -44,6 +68,7 @@ function criarNovaMelhoria() {
 
 // Listeners iniciais nos primeiros campos
 desviosContainer.firstElementChild.addEventListener("input", () => {
+    atualizarPontuacao();
     if(desviosContainer.firstElementChild.value.trim() !== "" && desviosContainer.firstElementChild === desviosContainer.lastElementChild){
         criarNovoDesvio();
     }
@@ -62,14 +87,11 @@ document.getElementById("formCamp").addEventListener("submit", function(event){
     const name = document.getElementById("analistName").value;
     const context = document.getElementById("context").value;
     const idProtocol = document.getElementById("idProtocol").value;
-    const notice = document.getElementById("noticeData").value;
 
     // Atualiza os dados principais do imageBlock
     document.getElementById("Name").textContent = name;
     document.getElementById("subject").textContent = context;
     document.getElementById("id").textContent = idProtocol;
-    document.getElementById("notice").textContent = notice + "%";
-
 
     // Limpa ULs antes de atualizar
     ulDesvios.innerHTML = "";
@@ -104,3 +126,6 @@ document.getElementById('createImg').addEventListener('click', () => {
         link.click();
     });
 });
+
+// Inicializa nota na primeira carga
+atualizarPontuacao();
