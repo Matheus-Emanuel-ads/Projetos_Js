@@ -1,55 +1,200 @@
-body{
+body {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: #f0f0f0; 
 }
 
-#imageBlock{
+
+#imageBlock {
     position: fixed;
-    background-color: red;
-    right: 15vh; 
-    top: 10vh;
-    width: 86vh;
-    min-height: 80vh;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;          /* ocupa 90% da largura da tela */
+    max-width: 700px;    /* mas não ultrapassa 700px */
+    background-color: rgb(233, 1, 1);
+    border-radius: 8px;
+    border: 3px solid rgb(24, 0, 0);
+    padding: 20px;
+    box-sizing: border-box;
     font-size: small;
     text-align: center;
-    border-radius: 2px;
-    border: 3px solid rgb(24, 0, 0);
+    overflow: visible;
 }
-#imageBlock header{
-    background-color: white;
+
+
+
+#imageBlock header {
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) 2fr minmax(50px, 1fr);
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
     border-radius: 8px;
-    width: 80vh;
-    margin-left: 3vh;
-    margin-top: 3vh;
-    border: 2.7px solid black
-}
-#imageBlock header h1{
-    color: rgb(190, 2, 2);
-}
-.section{
-    background-color: white;
-    border-radius: 8px;
-    width: 80vh;
-    margin-left: 3vh;
-    margin-top: 1vh;
     border: 2.7px solid black;
+    padding: 10px;
+}
+
+
+#imageBlock header h1 {
+    color: rgb(233, 1, 1);
+    margin: 0;
+}
+
+
+.section {
+    display: flex;
+    flex-wrap: wrap;  
+    align-items: stretch;
+    gap: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2.7px solid black;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+.notesTitle {
+    font-size: medium;
     display: flex;
     align-items: center;
+    min-width: 135px;
+    gap: 5px;
 }
-.notesTitle{
-    font-size: medium;
-    margin-left: 1vh;
-}
-.itens{
+
+.itens {
     text-align: start;
+    display: block; 
+    max-width: 100%; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
 }
-footer p{
+
+.itens li {
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left; 
+}
+
+
+footer p {
     color: white;
+    margin: 5px 0;
 }
-.footerInfos{
+
+.footerInfos {
     background-color: #fce46c;
     color: black;
-    width: 80vh;
-    margin-left: 3vh;
     border-radius: 6px;
+    padding: 5px;
 }
+
+
+#notice {
+    font-size: 30px;
+    background-color: rgb(233, 1, 1);
+    width: 105px;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid black;
+    box-shadow: 0 0 0 3px rgb(233, 1, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#desviationColorIellow{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-shadow: 
+    1px 1px 0 rgb(255, 251, 0),
+   -1px 1px 0 rgb(255, 251, 0),
+    1px -1px 0 rgb(255, 251, 0),
+   -1px -1px 0 rgb(255, 251, 0);
+}
+
+#desviationColorGreen{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-shadow: 
+    1px 1px 0 rgb(87, 255, 101),
+   -1px 1px 0 rgb(87, 255, 101),
+    1px -1px 0 rgb(87, 255, 101),
+   -1px -1px 0 rgb(87, 255, 101);
+}
+
+#createImg {
+    background-color: #002fff;
+
+}
+
+.imgNotesTitle{
+    width: 37px;
+    object-fit: contain;
+}
+
+#form{
+    background-color: #fcfcfc;
+    width: 40%;
+}
+
+
+/* Form */
+
+
+form {
+  width: 90%;           /* ocupa 90% da largura da tela */
+  max-width: 650px;     /* mas não ultrapassa 650px */
+  margin: 50px auto;
+  padding: 20px 40px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #002fff;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+textarea{
+    resize: none;
+}
+/* alterar: quebra de linha assunto, mudar para float nota da manitoria, e mudar a ordenação de div em section*/
