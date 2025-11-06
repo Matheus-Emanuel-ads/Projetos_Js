@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto de atenção</title>
     <link rel="stylesheet" href="style.css">
+        <header>
+        <div>
+            <h1>Ponto de atenção - Escola de serviços</h1>
+        </div>
+    </header>
 </head>
 <body>
     <div id="form">
@@ -32,26 +37,26 @@
 
             <button type="submit">Enviar</button>
             <button id="createImg">Gerar imagem</button>
-            <button id="zeroButton">Zerar nota</button>
+            <button id="createPdf">Gerar PDF</button>
         </form>    
     </div>
 
 
     <div id="imageBlock">
-        <header>
+        <div id="header">
             <div>
                 <img src="attentionPoint.jpg" alt="Megafone chamando atenção">
             </div>
             <div>
                 <h1>PONTO DE ATENÇÃO</h1>
-                <h3><span id="Name"></span>, sua nota foi: <span id="Name"></span></h3>
+                <h3><span id="Name"></span>, sua nota foi:</h3>
                 <p>Assunto: <span id="subject"></span></p>
                 <p>ID/Protocolo: <span id="id"></span></p>
             </div>
             <div>
-                <div id="notice"> <span id="notice">%</span></div>
+                <div> <span id="notice">%</span></div>
             </div>
-        </header>
+        </div>
         <div class="section desviation">
             <div class="notesTitle">
                 <img src="warning.png" alt="warning" class="imgNotesTitle">
@@ -81,6 +86,7 @@
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

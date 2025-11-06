@@ -27,6 +27,10 @@ function atualizarPontuacao() {
     // Atualiza o span dentro do imageBlock
     document.getElementById("notice").textContent = totalPontos.toFixed(2).replace(".", ",") + "%";
 }
+    const zeroButton = document.getElementById("zeroButton");
+    zeroButton.addEventListener("click", function(){
+    document.getElementById("notice").textContent = "0,00%"
+    })
 
 
 // Função para criar novo campo de Desvio
@@ -121,11 +125,17 @@ document.getElementById('createImg').addEventListener('click', () => {
     const div = document.getElementById('imageBlock');
     html2canvas(div, {scale: 2}).then(canvas => {
         const link = document.createElement('a');
-        link.download = 'PontoDeAtencao.jpg';
+        let Name = document.getElementById("analistName").value;
+        let archiveName = "PontoDeAtencao_" + Name + ".jpg";
+        link.download = archiveName;
         link.href = canvas.toDataURL();
         link.click();
     });
 });
+
+const date = new Date().toLocaleDateString('pt-BR');
+document.getElementById("today").textContent = date; 
+
 
 // Inicializa nota na primeira carga
 atualizarPontuacao();
